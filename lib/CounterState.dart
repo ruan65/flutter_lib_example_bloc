@@ -1,9 +1,10 @@
 class CounterState {
-  int counter;
 
-  CounterState._();
+  final int counter;
 
-  factory CounterState.initial() {
-    return CounterState._()..counter = 0;
-  }
+
+  CounterState._(this.counter);
+
+  factory CounterState.nextState(int times) => CounterState._(times);
+
 }
